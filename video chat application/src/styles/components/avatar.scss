@@ -1,0 +1,34 @@
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+
+  @media screen and (min-width: $mobile-breakpoint) {
+    height: 125px;
+    width: 125px;
+  }
+
+  .avatar-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: #fff;
+    background-size: cover;
+  }
+
+  .avatar-icon {
+    height: 100%;
+    width: 100%;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

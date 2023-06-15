@@ -1,0 +1,23 @@
+.navbar {
+  position: absolute;
+  display: flex;
+  top: 0px;
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+
+  .navbar-left {
+    padding-left: 1rem;
+
+    .go-back-button {
+      background-color: transparent;
+      color: #8c8c8c;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}

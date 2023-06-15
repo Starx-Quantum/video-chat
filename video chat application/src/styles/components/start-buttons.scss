@@ -1,0 +1,54 @@
+.start-page_buttons {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .meeting-button {
+    background-color: $primary-color;
+    width: 100%;
+    border-radius: 3px;
+    height: 2rem;
+    color: black;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: lighten($primary-color, 10%);
+      box-shadow: 1px 1px 3px 1px $primary-color;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 70%;
+      height: 3rem;
+      font-size: 0.9rem;
+    }
+  }
+
+  .join-button {
+    background-color: transparent;
+    width: 100%;
+    border-radius: 3px;
+    height: 2rem;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: lighten($secondary-color, 10%);
+      box-shadow: 1px 1px 3px 1px $secondary-color;
+      color: black;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 70%;
+      height: 3rem;
+      font-size: 0.9rem;
+    }
+  }
+}

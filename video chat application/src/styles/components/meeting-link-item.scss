@@ -1,0 +1,79 @@
+.meeting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  transition: background-color 0.5s ease-in, box-shadow 0.25s ease-out,
+    margin 0.25s ease-out;
+
+  @media screen and (min-width: 768px) {
+    padding: 1rem;
+    margin: 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #525c5b;
+    }
+
+    &:hover {
+      transition: background-color 0.25s ease-out, box-shadow 0.125s ease-out,
+        margin 0.125s ease-out;
+      background-color: #a9a9a91a;
+      border-bottom: 1px solid transparent;
+      box-shadow: 2px 2px 5px 1px #1d1d1d;
+    }
+  }
+
+  .meeting-item_left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    .link-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #4b5a5d;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+    }
+
+    .meeting-content {
+      display: flex;
+      flex-direction: column;
+
+      .meeting-content_time {
+        color: hsl(236deg, 9%, 61%);
+        font-size: 0.85rem;
+        margin-top: 0.25rem;
+      }
+    }
+  }
+
+  .meeting-item_right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .copied-message {
+      display: flex;
+      gap: 0.5rem;
+
+      .copied-message_text {
+        font-style: italic;
+      }
+
+      svg {
+        color: $primary-color;
+      }
+    }
+  }
+}

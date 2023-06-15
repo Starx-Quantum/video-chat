@@ -1,0 +1,61 @@
+$button-size-mobile: 2.5rem;
+$button-size: 3rem;
+
+$svg-size-mobile: 16px;
+$svg-size: 18px;
+
+.track-buttons {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.button-size {
+  height: $button-size-mobile;
+  width: $button-size-mobile;
+
+  @media (min-width: $mobile-breakpoint) {
+    height: $button-size;
+    width: $button-size;
+  }
+}
+
+.track-button {
+  @extend .button-size;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: transparent !important;
+  box-shadow: 1px 1px 5px 1px rgb(0 0 0 / 35%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    z-index: 2;
+    height: $svg-size-mobile;
+
+    @media (min-width: $mobile-breakpoint) {
+      height: $svg-size;
+    }
+  }
+
+  .button-background {
+    @extend .button-size;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(70, 70, 70, 0.695);
+    transition: background-color 200ms linear;
+  }
+
+  &.inactive {
+    .button-background {
+      background-color: rgba(238, 12, 12, 0.822);
+    }
+  }
+}
